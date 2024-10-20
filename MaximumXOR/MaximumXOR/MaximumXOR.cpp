@@ -110,81 +110,88 @@ int main()
 
     for (int j = A[0]; j <= LIM[F]; j++) {
 
-        S = double(j) + 0.5;
+        if (F == 0 || F == 1) {
 
-        for (int i = 0; i <= L - 1; i++) {
+            S = double(j) + 0.5;
 
-            T[i] = int(S * B[i]);
+            for (int i = 0; i <= L - 1; i++) {
 
-            T[i] = (T[i] - int(T[i] / nV) * nV) + 1;
+                T[i] = int(S * B[i]);
 
-            if (T[i] <= 1) {
+                T[i] = (T[i] - int(T[i] / nV) * nV) + 1;
 
-                T[i] = 0;
-            }
-            else if (T[i] > 1) {
+                if (T[i] <= 1) {
 
-                T[i] = 1;
-            }
-        }
+                    T[i] = 0;
+                }
+                else if (T[i] > 1) {
 
-        ii = L - 1;
-
-        for (int i = 0; i <= L - 1; i++) {
-
-            if (!T[i] && !G[U][i]) {
-
-                XOR[i] = 0;
-            }
-            else if (T[i] && !G[U][i]) {
-
-                XOR[i] = 1;
-            }
-            else if (!T[i] && G[U][i]) {
-
-                XOR[i] = 1;
-            }
-            else if (T[i] && G[U][i]) {
-
-                XOR[i] = 0;
+                    T[i] = 1;
+                }
             }
 
-            if (XOR[i]) {
+            ii = L - 1;
 
-                COMP[1] = COMP[1] + pow(nV, ii); 
+            for (int i = 0; i <= L - 1; i++) {
+
+                if (!T[i] && !G[U][i]) {
+
+                    XOR[i] = 0;
+                }
+                else if (T[i] && !G[U][i]) {
+
+                    XOR[i] = 1;
+                }
+                else if (!T[i] && G[U][i]) {
+
+                    XOR[i] = 1;
+                }
+                else if (T[i] && G[U][i]) {
+
+                    XOR[i] = 0;
+                }
+
+                if (XOR[i]) {
+
+                    COMP[1] = COMP[1] + pow(nV, ii);
+                }
+                ii--;
             }
-            ii--;
+
+            for (int i = 0; i <= L - 1; i++) {
+
+                std::cout << T[i];
+            }
+            std::cout << "\n";
+
+            for (int i = 0; i <= L - 1; i++) {
+
+                std::cout << G[U][i];
+            }
+            std::cout << "\n";
+
+            for (int i = 0; i <= L - 1; i++) {
+
+                std::cout << XOR[i];
+            }
+            std::cout << "\n";
+
+
+            if (COMP[0] >= COMP[1] && COMP[1] <= LIM[F]) {
+
+                COMP[1] = 0;
+            }
+            else if (COMP[0] < COMP[1] && COMP[1] <= LIM[F]) {
+
+                COMP[0] = COMP[1];
+                COMP[1] = 0;
+            }
+            std::cout << "\n";
         }
+        else {
 
-        for (int i = 0; i <= L - 1; i++) {
-
-            std::cout << T[i];           
+            break;
         }
-        std::cout << "\n";
-
-        for (int i = 0; i <= L - 1; i++) {
-
-            std::cout << G[U][i];
-        }
-        std::cout << "\n";
-
-        for (int i = 0; i <= L - 1; i++) {
-
-            std::cout << XOR[i];
-        }
-        std::cout << "\n";
-
-
-        if (COMP[0] >= COMP[1] && COMP[1] <= LIM[F]) {
-
-            COMP[1] = 0;
-        }
-        else if (COMP[0] < COMP[1] && COMP[1] <= LIM[F]) {
-
-            COMP[0] = COMP[1];
-            COMP[1] = 0;
-        }
-        std::cout << "\n";
     }
 
     S = COMP[0] + 0.5;
