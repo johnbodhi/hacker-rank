@@ -158,7 +158,7 @@ int main()
                 ii--;
             }
 
-           for (int i = 0; i <= L - 1; i++) {
+          /* for (int i = 0; i <= L - 1; i++) {
 
                 std::cout << T[i];
             }
@@ -174,7 +174,7 @@ int main()
 
                 std::cout << XOR[i];
             }
-            std::cout << "\n";
+            std::cout << "\n";*/
 
 
             if (COMP[0] >= COMP[1]) {
