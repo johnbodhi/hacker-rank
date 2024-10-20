@@ -108,7 +108,7 @@ int main()
 
     // XOR
 
-    for (int j = 0; j <= LIM[F]; j++) {
+    for (int j = A[0]; j <= LIM[F]; j++) {
 
         S = double(j) + 0.5;
 
@@ -156,6 +156,25 @@ int main()
             ii--;
         }
 
+        for (int i = 0; i <= L - 1; i++) {
+
+            std::cout << T[i];           
+        }
+        std::cout << "\n";
+
+        for (int i = 0; i <= L - 1; i++) {
+
+            std::cout << G[U][i];
+        }
+        std::cout << "\n";
+
+        for (int i = 0; i <= L - 1; i++) {
+
+            std::cout << XOR[i];
+        }
+        std::cout << "\n";
+
+
         if (COMP[0] >= COMP[1] && COMP[1] <= LIM[F]) {
 
             COMP[1] = 0;
@@ -165,6 +184,7 @@ int main()
             COMP[0] = COMP[1];
             COMP[1] = 0;
         }
+        std::cout << "\n";
     }
 
     S = COMP[0] + 0.5;
