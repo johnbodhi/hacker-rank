@@ -1,3 +1,3 @@
 ﻿  MaximumXOR.cpp
-C:\Users\jmgar\OneDrive\Documents\GitHub\hacker-rank\MaximumXOR\MaximumXOR\MaximumXOR.cpp(116,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\jmgar\OneDrive\Documents\GitHub\hacker-rank\MaximumXOR\MaximumXOR\MaximumXOR.cpp(111,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
   MaximumXOR.vcxproj -> C:\Users\jmgar\OneDrive\Documents\GitHub\hacker-rank\MaximumXOR\x64\Debug\MaximumXOR.exe

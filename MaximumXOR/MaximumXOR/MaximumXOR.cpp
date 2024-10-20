@@ -158,7 +158,7 @@ int main()
                 ii--;
             }
 
-            for (int i = 0; i <= L - 1; i++) {
+           for (int i = 0; i <= L - 1; i++) {
 
                 std::cout << T[i];
             }
@@ -177,11 +177,11 @@ int main()
             std::cout << "\n";
 
 
-            if (COMP[0] >= COMP[1] && COMP[1] <= LIM[F]) {
+            if (COMP[0] >= COMP[1]) {
 
                 COMP[1] = 0;
             }
-            else if (COMP[0] < COMP[1] && COMP[1] <= LIM[F]) {
+            else if (COMP[0] < COMP[1]) {
 
                 COMP[0] = COMP[1];
                 COMP[1] = 0;
