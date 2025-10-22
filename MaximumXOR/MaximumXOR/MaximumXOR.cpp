@@ -158,23 +158,23 @@ int main()
                 ii--;
             }
 
-          /* for (int i = 0; i <= L - 1; i++) {
+           //for (int i = 0; i <= L - 1; i++) {
 
-                std::cout << T[i];
-            }
-            std::cout << "\n";
+           //     std::cout << T[i];
+           // }
+           // std::cout << "\n";
 
-            for (int i = 0; i <= L - 1; i++) {
+           // for (int i = 0; i <= L - 1; i++) {
 
-                std::cout << G[U][i];
-            }
-            std::cout << "\n";
+           //     std::cout << G[U][i];
+           // }
+           // std::cout << "\n";
 
-            for (int i = 0; i <= L - 1; i++) {
+           // for (int i = 0; i <= L - 1; i++) {
 
-                std::cout << XOR[i];
-            }
-            std::cout << "\n";*/
+           //     std::cout << XOR[i];
+           // }
+           // std::cout << "\n";
 
 
             if (COMP[0] >= COMP[1]) {
